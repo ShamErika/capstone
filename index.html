@@ -54,14 +54,26 @@
 <div id="home" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>Predictive Home Page</h2><br>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-     <!-- <br><button class="btn btn-default btn-lg">Get in Touch</button> --> 
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
-    </div>
+      <h2>Predictive Home Page</h2><br>s
+      <h1>Graph Viewer</h1>
+  <label for="year-select">Select a Year:</label>
+  <select id="year-select">
+    <option value="dengue_cases_2022.html">2022</option>
+    <option value="dengue_cases_2023.html">2023</option>
+    <option value="graphs/2024.html">2024</option>
+  </select>
+
+  <div id="graph-container">
+    <iframe id="graph-frame" src="graphs/2022.html"></iframe>
+  </div>
+      
+
+
+
+
+      
+  
+    
   </div>
 </div>
 
@@ -79,9 +91,9 @@
   </div>
 </div>
 
-<!-- Container (PREVENTION Section) -->
-<div id="prevention" class="container-fluid text-center">
-  <h2>PREVENTION</h2>
+<!-- Container (SIGNS AND SYMPTOMS Section) -->
+<div id="ss" class="container-fluid text-center">
+  <h2>SIGNS AND SYMPTOMS</h2>
   <h4>blah blah</h4>
   <br>
   <div class="row slideanim">
@@ -121,9 +133,9 @@
   </div>
 </div>
 
-<!-- Container (SIGNS AND SYMPTOMS Section) -->
-<div id="ss" class="container-fluid text-center bg-grey">
-  <h2>SIGNS AND SYMPTOMS</h2><br>
+<!-- Container (PREVENTION Section) -->
+<div id="prevention" class="container-fluid text-center bg-grey">
+  <h2>PRVENTION</h2><br>
   <h4>What we have created</h4>
   <div class="row text-center slideanim">
     <div class="col-sm-4">
@@ -290,6 +302,17 @@
 </footer>
 
 <script>
+  const selectElement = document.getElementById('year-select');
+    const graphFrame = document.getElementById('graph-frame');
+
+    selectElement.addEventListener('change', () => {
+      const selectedYear = selectElement.value;
+      graphFrame.src = selectedYear;
+    });
+
+
+// end of testing 
+
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
