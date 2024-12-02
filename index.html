@@ -31,14 +31,15 @@
         <li><a href="#home">HOME</a></li>
         <li><a href="#ss">SIGNS & SYMPTOMPS</a></li>
         <li><a href="#prevention">PREVENTION</a></li>
-
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li><a href="#login">LOG IN</a></li>
+        <!-- LOG IN -->
+        <li><a href="#loginModal" id="loginBtn">Admin Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+
 
 <div class="jumbotron text-center">
  <img  class="logo-img" src='img/lamok.png'>
@@ -61,6 +62,24 @@
     <div class="col-sm-8">
       <h2>Predictive Home Page</h2><br>
       <div class="graph-container">
+
+
+        <!-- Admin Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Admin Login</h2>
+    <p>*this is for admins only!</p>
+    <form id="adminLoginForm">
+      <label for="username" style="color: #0B60B0;">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password" style="color: #0B60B0;" >Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br><br>
+      <button type="submit" style="color: #0B60B0;">Log In</button>
+    </form>
+  </div>
+</div>
        
 
 
@@ -261,34 +280,6 @@
   
 </div>
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> BAGUIO CITY, PHILIPPINES</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -313,53 +304,7 @@
 
 </footer>
 
-<script>
-  const selectElement = document.getElementById('year-select');
-    const graphFrame = document.getElementById('graph-frame');
-
-    selectElement.addEventListener('change', () => {
-      const selectedYear = selectElement.value;
-      graphFrame.src = selectedYear;
-    });
-
-
-// end of testing 
-
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-</script>
+<script src="script.js"></script> 
 
 </body>
 </html>
