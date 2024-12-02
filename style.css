@@ -25,6 +25,15 @@
     margin-bottom: 30px;
   } 
 
+  .p-a{
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: left;
+    color:#0B60B0
+  }
   .jumbotron {
     background-color: #0B60B0;
     color: #fff;
