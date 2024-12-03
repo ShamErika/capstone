@@ -37,7 +37,7 @@
   .jumbotron {
     background-color: #0B60B0;
     color: #fff;
-    padding: 100px 25px;
+    padding: 50px 25px;  /* adjust the color blue here*/
     font-family: Montserrat, sans-serif;
   }
   .container-fluid {
@@ -132,12 +132,13 @@
     letter-spacing: 4px;
     border-radius: 0;
     font-family: Montserrat, sans-serif;
+    
   }
   .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
     border: 2px solid white;
     border-radius: 5px;
-    padding: 15px 20px;
+    padding: 10px 15px;
     margin-right: 20px;
     margin-top: 10px;
   }
@@ -276,4 +277,13 @@
   color: black;
   font-size: 20px;
   cursor: pointer;
+}
+
+hr {
+  color: #0B60B0;
+  border: 1px solid;
+  margin-top: -1;
+  margin-left: 1px;
+  width: 40%;
+ 
 }
