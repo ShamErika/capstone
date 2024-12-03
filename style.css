@@ -244,10 +244,29 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 25px auto;
-    width: 80%; /* Adjust width as needed */
+    margin: 25px auto; 
+    width: 150%; /* Adjust width as needed */
     margin-left: 15px;
+    display: flex; /* Makes the child elements align side by side */
+    justify-content: space-around; /* Adds space between the two graphs */
+    align-items: center;   /* Vertically center graphs */
+    
+   
   }
+
+  .graph {
+    flex: 1;               /* Allow each graph to take equal space */
+    max-width: 45%;        /* Set max width for each graph */
+    margin: 0 10px;        /* Add horizontal spacing between graphs */
+  }
+  
+  canvas {
+    width: 100%;           /* Make canvas fill the container */
+    height: auto;          /* Adjust height automatically */
+  }
+
+ 
+
 
 
   /* Modal */

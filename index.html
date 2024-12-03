@@ -76,10 +76,8 @@
       <h2>Predictive Home Page</h2>
       <hr>
       <br><br>
-      <div class="graph-container">
 
-
-        <!-- Admin Login Modal -->
+<!-- Admin Login Modal -->
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -95,11 +93,11 @@
     </form>
   </div>
 </div>
-       
 
 
-     <!-- GRAPH PART HERE -->
-        <h1 style="color: black;">Graph Viewer</h1>
+<div class="graph-container">
+  <div class="graph">
+    <h1 style="color: black;">Graph Viewer</h1>
         <label for="year-select" style="color: black;">Select a Year:</label>
         <select id="year-select" style="color: black;">
           <option value="dengue_cases_2022.html">2022</option>
@@ -107,15 +105,47 @@
           <option value="dengue_cases_2024.html">2024</option>
           <option value="predicted_cases_2.html">Predicted</option>
         </select>
+
       
         <div id="graph-container">
           <iframe id="graph-frame" src="dengue_cases_2024.html"></iframe>
         </div>
-        </div>
-
+    <canvas id="graph1"></canvas>
+  </div>
+  <div class="graph">
+    
+    <div class="graph-right">
+      <h1 style="color: black;">GIS Viewer</h1>
+      <label for="year-select" style="color: black;">Select a Year:</label>
+      <select id="year-select" style="color: black;">
+        <option value="GIS_2022.html">2022</option>
+        <option value="GIS_2023.html">2023</option>
+        <option value="dengue_cases_2024.html">2024</option>
+        <option value="predicted_cases_2.html">Predicted</option>
+      </select>
+    
+      <div id="graph-container">
+        <iframe id="graph-frame" src="GIS_2022.html"></iframe>
       </div>
-     
+    <canvas id="graph2"></canvas>
+  </div>
+</div>
 
+
+
+  </div>
+
+
+      
+  
+
+
+       
+
+
+
+        </div>
+      </div>
 </div>
 
 
