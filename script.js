@@ -98,4 +98,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  function addLegendItem(color, label) {
+    const legend = document.getElementById("legend");
   
+    const legendItem = document.createElement("div");
+    legendItem.className = "legend-item";
+  
+    const legendSymbol = document.createElement("span");
+    legendSymbol.className = "legend-symbol";
+    legendSymbol.style.backgroundColor = color;
+  
+    const legendLabel = document.createElement("span");
+    legendLabel.className = "legend-label";
+    legendLabel.textContent = label;
+  
+    legendItem.appendChild(legendSymbol);
+    legendItem.appendChild(legendLabel);
+  
+    legend.appendChild(legendItem);
+  }
