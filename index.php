@@ -1,3 +1,9 @@
+<?php
+  session_start(); 
+
+  $isLoggedIn = isset($_SESSION['user_id']); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +41,7 @@
         <li><a href="#prevention">PREVENTION</a></li>
         <li><a href="#about">ABOUT</a></li>
         <!-- LOG IN -->
-        <li><a href="#loginModal" id="loginBtn">Admin Login</a></li>
+        <li><a href="admin.php">Admin Login</a></li>
       </ul>
     </div>
   </div>
@@ -49,9 +55,8 @@
 
   <!--yung search bar na di ma search -->
   <div class="search-container">
-    <form action="search.php" method="GET">
-      <input style="color: #0B60B0;"   class="" type="text" placeholder="Search.." name="query" required>
-      <button class="search-button" type="submit" value="Search"><i class="fa fa-search"></i></button>
+      <input style="color: #0B60B0;"   class="" type="text" placeholder="Search.." >
+      <button id="search-button" ><i style="color:#0B60B0;" class="fa fa-search"></i></button>
     </form>
   </div>
 </div>
@@ -59,12 +64,20 @@
       
 
 <!-- end ng search bar 
+
  <div class="search-container">
-        <form action="search.php" method="GET">
-            <input type="text" name="query" placeholder="Search for mosquito info..." required>
-            <input type="submit" value="Search">
-        </form>
-    </div>
+    <input type="text" id="search-input" placeholder="Search...">
+    <button id="search-button">Search</button>
+</div>
+<div id="search-results"></div>
+
+<div class="search-container">
+    <form action="search.php" method="GET">
+      <input style="color: #0B60B0;"   class="" type="text" placeholder="Search.." name="query" required>
+      <button class="search-button" type="submit" value="Search"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
 
 -->
  <!-- beh di gumagana search bar iyaq-->
@@ -73,42 +86,26 @@
 <div id="home" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>Predictive Home Page</h2>
+      <h2>DASHBOARD</h2>
       <hr>
       <br><br>
 
-<!-- Admin Login Modal -->
-<div id="loginModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Admin Login</h2>
-    <p>*this is for admins only!</p>
-    <form id="adminLoginForm">
-      <label for="username" style="color: #0B60B0;">Username:</label>
-      <input type="text" id="username" name="username" required>
-      <label for="password" style="color: #0B60B0;" >Password:</label>
-      <input type="password" id="password" name="password" required>
-      <br><br>
-      <button type="submit" style="color: #0B60B0;">Log In</button>
-    </form>
-  </div>
-</div>
-
+<!--graph part-->
 
 <div class="graph-container">
   <div class="graph">
     <h1 style="color: black;">Graph Viewer</h1>
         <label for="year-select" style="color: black;">Select a Year:</label>
         <select id="year-select" style="color: black;">
-          <option value="dengue_cases_2022.html">2022</option>
-          <option value="dengue_cases_2023.html">2023</option>
-          <option value="dengue_cases_2024.html">2024</option>
-          <option value="predicted_cases_2.html">Predicted</option>
+          <option value="html/dengue_cases_2022.html">2022</option>
+          <option value="html/dengue_cases_2023.html">2023</option>
+          <option value="html/dengue_cases_2024.html">2024</option>
+          <option value="html/predicted_cases_2.html">Predicted</option>
         </select>
 
       
         <div id="graph-container">
-          <iframe id="graph-frame" src="dengue_cases_2024.html"></iframe>
+          <iframe id="graph-frame" src="html/dengue_cases_2024.html"></iframe>
         </div>
     <canvas id="graph1"></canvas>
   </div>
@@ -118,8 +115,8 @@
       <h1 style="color: black;">GIS Viewer</h1>
       <label for="year-select" style="color: black;">Select a Year:</label>
       <select id="year-select" style="color: black;">
-        <option value="GIS_2022.html">2022</option>
-        <option value="GIS_2023.html">2023</option>
+        <option value="html/GIS_2022.html">2022</option>
+        <option value="html/GIS_2023.html">2023</option>
       </select>
     
       <div id="graph-container">
@@ -151,14 +148,9 @@
 
 
   </div>
-
-
-
-
-
   </div>
-        </div>
-      </div>
+  </div>
+  </div>
 </div>
 
 

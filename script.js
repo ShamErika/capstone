@@ -59,44 +59,7 @@ $(document).ready(function(){
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const loginBtn = document.getElementById("loginBtn");
-    const modal = document.getElementById("loginModal");
-    const closeBtn = document.querySelector(".close");
-    const loginForm = document.getElementById("adminLoginForm");
-  
-    // Open modal
-    loginBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      modal.style.display = "flex";
-    });
-  
-    // Close modal
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-  
-    // Close modal when clicking outside the content
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  
-    // Handle form submission
-    loginForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-  
-      // Perform authentication logic (e.g., API call)
-      console.log(`Username: ${username}, Password: ${password}`);
-  
-      // Close modal and reset form
-      modal.style.display = "none";
-      loginForm.reset();
-    });
-  });
+//legend gis
   
   function addLegendItem(color, label) {
     const legend = document.getElementById("legend");
@@ -117,3 +80,41 @@ document.addEventListener("DOMContentLoaded", () => {
   
     legend.appendChild(legendItem);
   }
+
+
+  // search bar
+  const data = ["Dengue", "Prevention", "Signs", "Symptoms"];
+
+document.getElementById('search-button').addEventListener('click', () => {
+    const query = document.getElementById('search-input').value.toLowerCase();
+    const results = data.filter(item => item.toLowerCase().includes(query));
+    displayResults(results);
+});
+
+function displayResults(results) {
+    const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = results.length 
+        ? `<ul>${results.map(item => `<li>${item}</li>`).join('')}</ul>` 
+        : '<p>No results found.</p>';
+}
+
+//live search
+document.getElementById('search-input').addEventListener('input', () => {
+  const query = document.getElementById('search-input').value.toLowerCase();
+  const results = data.filter(item => item.toLowerCase().includes(query));
+  displayResults(results);
+});
+
+//ajax
+document.getElementById('search-button').addEventListener('click', async () => {
+  const query = document.getElementById('search-input').value;
+  const response = await fetch(`/search?q=${encodeURIComponent(query)}`);
+  const results = await response.json();
+  displayResults(results);
+});
+//node.js
+app.get('/search', (req, res) => {
+  const query = req.query.q.toLowerCase();
+  const results = data.filter(item => item.toLowerCase().includes(query));
+  res.json(results);
+});
