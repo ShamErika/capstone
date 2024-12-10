@@ -41,7 +41,7 @@
         <li><a href="#prevention">PREVENTION</a></li>
         <li><a href="#about">ABOUT</a></li>
         <!-- LOG IN -->
-        <li><a href="admin.php">Admin Login</a></li>
+        <li><a href="admin.php">ADMIN LOGIN</a></li>
       </ul>
     </div>
   </div>
@@ -352,7 +352,7 @@
   <a href="https://www.flaticon.com/free-icons/allergy" title="allergy icons">Allergy icons created by Freepik - Flaticon</a>
   <div> Icons made by <a href="https://www.flaticon.com/authors/puckung" title="Puckung"> Puckung </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
   <div> Icons made by <a href="https://www.flaticon.com/authors/flowicon" title="Flowicon"> Flowicon </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-  <div> images from <a href="https://ph.pinterest.com/" title="Pintrest"> Pintrest </a> from <a href="https://ph.pinterest.com/">www.pintrest.com'</a></div>
+  
 
 
 
