@@ -65,19 +65,7 @@
 
 <!-- end ng search bar 
 
- <div class="search-container">
-    <input type="text" id="search-input" placeholder="Search...">
-    <button id="search-button">Search</button>
-</div>
-<div id="search-results"></div>
-
-<div class="search-container">
-    <form action="search.php" method="GET">
-      <input style="color: #0B60B0;"   class="" type="text" placeholder="Search.." name="query" required>
-      <button class="search-button" type="submit" value="Search"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
-
+ 
 
 -->
  <!-- beh di gumagana search bar iyaq-->
@@ -92,16 +80,31 @@
 
 <!--graph part-->
 
+
 <div class="graph-container">
   <div class="graph">
     <h1 style="color: black;">Graph Viewer</h1>
-  
+      
         <div id="graph-container">
           <iframe id="graph-frame" src="index_graphs.php"></iframe>
         </div>
+
+<canvas id="graph1"></canvas>
+  </div>
+
+  <div class="graph">
+  <h1 style="color: black;">Predicted</h1>
+  <div id="graph-container">
+  <div class="graph-below">
+          <iframe id="graph-frame" src="predictions.php"></iframe>
+        </div>
+</div>
     <canvas id="graph1"></canvas>
   </div>
   <div class="graph">
+
+
+
     
     <div class="graph-right">
       <h1 style="color: black;">GIS Viewer</h1>
@@ -117,6 +120,7 @@
     <canvas id="graph2"></canvas>
   </div>
 </div>
+
 
 
 <!-- LEGEND PART FOR GIS-->

@@ -220,12 +220,6 @@
 
 
 
-
-  select {
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 16px;
-  }
   #graph-container {
     width: 100%;
     height: 500px;
@@ -243,11 +237,80 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 25px auto;
-    width: 80%; /* Adjust width as needed */
+    margin: 25px auto; 
+    width: 150%; /* Adjust width as needed */
     margin-left: 15px;
+    display: flex; /* Makes the child elements align side by side */
+    justify-content: space-around; /* Adds space between the two graphs */
+    align-items: center;   /* Vertically center graphs */
+    
+   
   }
 
+  .graph {
+    flex: 1;               /* Allow each graph to take equal space */
+    max-width: 45%;        /* Set max width for each graph */
+    margin: 0 10px;        /* Add horizontal spacing between graphs */
+  }
+  
+  canvas {
+    width: 100%;           /* Make canvas fill the container */
+    height: auto;          /* Adjust height automatically */
+  }
+
+ 
+.graph-below{
+
+  margin-bottom: 100%;
+  width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+}
+
+
+ 
+
+
+
+#legend {
+  bottom: 20px;
+  right: 20px;
+
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#legend h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-symbol {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #000;
+}
+
+.legend-label {
+  font-size: 14px;
+}
+
+
+
+
+  
 
   /* Modal */
 .modal {
