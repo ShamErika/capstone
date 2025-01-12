@@ -1,21 +1,9 @@
-function performSearch() {
-    const query = document.getElementById("search").value;
-    if (query) {
-        alert(`You searched for: ${query}`);
-        // In a real app, you might redirect or use this query for an API call
-        // Example: window.location.href = `/search?q=${query}`;
-    } else {
-        alert("Please enter a search query.");
-    }
-}
 
-const selectElement = document.getElementById('year-select');
-    const graphFrame = document.getElementById('graph-frame');
+document.getElementById('year-select').addEventListener('change', function () {
+  var selectedYear = this.value; // Get the selected value (GIS file path)
+  document.getElementById('gis-frame').src = selectedYear; // Update only the GIS iframe
+});
 
-    selectElement.addEventListener('change', () => {
-      const selectedYear = selectElement.value;
-      graphFrame.src = selectedYear;
-    });
 
 
 // end of testing 
@@ -99,16 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   
-// this for search bar
-  function performSearch() {
-    const query = document.getElementById('searchQuery').value;
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', `search.php?query=${encodeURIComponent(query)}`, true);
-    xhr.onload = function () {
-        if (this.status === 200) {
-            document.getElementById('searchResults').innerHTML = this.responseText;
-        }
-    };
-    xhr.send();
-}
+
   
+ 

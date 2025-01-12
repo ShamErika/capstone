@@ -37,11 +37,17 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home">HOME</a></li>
-        <li><a href="#ss">SIGNS & SYMPTOMPS</a></li>
+        <li><a href="#ss">SIGNS & SYMPTOMS</a></li>
         <li><a href="#prevention">PREVENTION</a></li>
         <li><a href="#about">ABOUT</a></li>
+
         <!-- LOG IN -->
-        <li><a href="admin.php">ADMIN LOGIN</a></li>
+        <?php if ($isLoggedIn): ?>
+          <li><a href="php/admin_dashboard.php">ADMIN DASHBOARD</a></li>
+          <li><a href="php/logout.php">LOGOUT</a></li>
+        <?php else: ?>
+          <li><a href="php/admin.php">ADMIN LOGIN</a></li>
+        <?php endif; ?>
       </ul>
     </div>
   </div>
@@ -54,29 +60,24 @@
   <p style="color: aliceblue;">One way to predict your future lamok destination</p> 
 
   <!--yung search bar na di ma search -->
-  <div class="search-container">
-      <input style="color: #0B60B0;"   class="" type="text" placeholder="Search.." >
-      <button id="search-button" ><i style="color:#0B60B0;" class="fa fa-search"></i></button>
-    </form>
-  </div>
-</div>
-  </div>
-      
+  
+ 
 
-<!-- end ng search bar 
+
+</div>
 
  
 
--->
- <!-- beh di gumagana search bar iyaq-->
 
 <!-- Container (HOME Section) -->
 <div id="home" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>DASHBOARD</h2>
+      <h2 style="font-size: 30px;">DASHBOARD</h2>
+    
       <hr>
       <br><br>
+      8 
 
 <!--graph part-->
 
@@ -86,7 +87,7 @@
     <h1 style="color: black;">Graph Viewer</h1>
       
         <div id="graph-container">
-          <iframe id="graph-frame" src="index_graphs.php"></iframe>
+          <iframe id="graph-viewer-frame" src="php/index_graphs.php"></iframe>
         </div>
 
 <canvas id="graph1"></canvas>
@@ -96,16 +97,15 @@
   <h1 style="color: black;">Predicted</h1>
   <div id="graph-container">
   <div class="graph-below">
-          <iframe id="graph-frame" src="predictions.php"></iframe>
+          <iframe id="predictions-frame" src="php/predictions.php"></iframe>
         </div>
 </div>
     <canvas id="graph1"></canvas>
   </div>
+
+
+
   <div class="graph">
-
-
-
-    
     <div class="graph-right">
       <h1 style="color: black;">GIS Viewer</h1>
       <label for="year-select" style="color: black;">Select a Year:</label>
@@ -115,7 +115,7 @@
       </select>
     
       <div id="graph-container">
-        <iframe id="graph-frame" src="html/GIS_2022.html"></iframe>
+        <iframe id="gis-frame" src="html/GIS_2022.html"></iframe>
       </div>
     <canvas id="graph2"></canvas>
   </div>
@@ -149,20 +149,10 @@
   </div>
 </div>
 
-
-      </div> <!-- END PART OF HOME PAGE CONTAINER -->
-
-
-
-
-      
+</div> <!-- END PART OF HOME PAGE CONTAINER --> 
 <br>
 <br>
-
-
 <!-- end ng graph and gis page -->
-
-
 
 <div class="container-fluid bg-grey">
   <div class="row">
@@ -170,6 +160,14 @@
       <span class="glyphicon glyphicon-globe logo slideanim"></span>
     </div>
     <div class="col-sm-8">
+
+
+    <section id="dengue">
+    <h2>dengue</h2>
+    <p>This is the About Us section...</p>
+  </section>
+
+      <section id="Dengue">
       <h2 style="color: #0B60B0;">Overview</h2><br>
       <h4 ><strong>What is Dengue?</strong>
         <br>
@@ -179,11 +177,14 @@
         body aches, nausea, and rash. Most will get better in 1–2 weeks. Some people develop severe dengue and need care in a hospital. </p>
         <h5 style="color: #0B60B0;"><strong>World Health Organization: WHO & World Health Organization: WHO. (2024, April 23). Dengue and severe dengue.</strong></h5>
     </div>
+        </section>
   </div>
 </div>
+      
 
 <!-- Container (SIGNS AND SYMPTOMS Section) -->
 <div id="ss" class="container-fluid text-center">
+  <section id="signs and symptoms">
   <h2>SIGNS AND SYMPTOMS</h2>
   <h4>When symptoms do occur, they may be mistaken for other illnesses — such as the flu — and usually 
     begin four to 10 days after you are bitten by an infected mosquito.</h4>
@@ -223,7 +224,7 @@
       <h4 style="color:#0B60B0;"><strong>Swollen Glands</strong></h4>
       <img  class="logo-img" src='img/glands.png'>
     </div>
-    
+        </section>
     
 </div>
 
@@ -356,7 +357,10 @@
 
 </footer>
 
-<script src="script.js"></script> 
+<script src="script.js">
+
+
+</script> 
 
 </body>
 </html>

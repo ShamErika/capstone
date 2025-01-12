@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engaging Search Bar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .search-box {
+      width: 300px;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-results {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      border: 1px solid #ccc;
+      width: 300px;
+      display: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .search-results a {
+      display: block;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .search-results a:hover {
+      background-color: #f1f1f1;
+    }
+
+    section {
+      padding: 50px;
+      margin: 50px 0;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+
+  <div class="search-container">
+    <input type="text" class="search-box" placeholder="Search..." id="search-input" />
+    <div class="search-results" id="search-results"></div>
+  </div>
+
+  <!-- Sections -->
+  <section id="dengue">
+    <h2>dengue</h2>
+    <p>This is the About Us section...</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>This is the Services section...</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>This is the Contact Us section...</p>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const sections = document.querySelectorAll('section');
+
+    // Function to show search results based on input
+    searchInput.addEventListener('input', function() {
+      const query = searchInput.value.toLowerCase();
+      searchResults.innerHTML = ''; // Clear previous results
+
+      if (query) {
+        const matchingSections = Array.from(sections).filter(section =>
+          section.querySelector('h2').textContent.toLowerCase().includes(query)
+        );
+
+        matchingSections.forEach(section => {
+          const resultItem = document.createElement('a');
+          resultItem.href = `#${section.id}`;
+          resultItem.textContent = section.querySelector('h2').textContent;
+          searchResults.appendChild(resultItem);
+        });
+
+        // Show the results dropdown
+        searchResults.style.display = 'block';
+      } else {
+        searchResults.style.display = 'none'; // Hide if no input
+      }
+    });
+
+    // Hide the search results when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.search-container')) {
+        searchResults.style.display = 'none';
+      }
+    });
+
+    // Smooth scrolling to the section
+    searchResults.addEventListener('click', function(event) {
+      if (event.target.tagName === 'A') {
+        searchResults.style.display = 'none'; // Hide results on click
+      }
+    });
+  </script>
+</body>
+</html>
