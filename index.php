@@ -57,13 +57,9 @@
 
 <div class="jumbotron text-center">
  <img  class="logo-img" src='img/lamok.png'>
-  <p style="color: aliceblue;">One way to predict your future lamok destination</p> 
-
-  <!--yung search bar na di ma search -->
-  
- 
 
 
+ <p style="color: aliceblue;">One way to predict your future lamok destination</p> 
 </div>
 
  
@@ -161,13 +157,6 @@
     </div>
     <div class="col-sm-8">
 
-
-    <section id="dengue">
-    <h2>dengue</h2>
-    <p>This is the About Us section...</p>
-  </section>
-
-      <section id="Dengue">
       <h2 style="color: #0B60B0;">Overview</h2><br>
       <h4 ><strong>What is Dengue?</strong>
         <br>
@@ -177,7 +166,7 @@
         body aches, nausea, and rash. Most will get better in 1–2 weeks. Some people develop severe dengue and need care in a hospital. </p>
         <h5 style="color: #0B60B0;"><strong>World Health Organization: WHO & World Health Organization: WHO. (2024, April 23). Dengue and severe dengue.</strong></h5>
     </div>
-        </section>
+ 
   </div>
 </div>
       
@@ -314,9 +303,11 @@
 <!-- Container (Pricing Section) -->
 <div id="about" class="container-fluid">
   <div class="text-center">
-    <h2>About</h2>
+    <h2 style="font-size:35px;">About</h2>
     <h4>LALAMOK is a website that helps people be knowledgable about dengue prevention, symptoms and cases around Baguio City.
-      <br> With the help of Predictions and Updated cases,we can lorem ipsum.
+      <br> With the help of Predictions and Updated cases,we can aure the safety of people around the city with the use of this website.
+      <br>LALAMOK help aim to protect and make sure that all suburb(barangay) of Baguio City aren't surrounded by deadly mosquitos that 
+      can 
     </h4>
   </div>
   <div class="row slideanim">
@@ -340,16 +331,21 @@
   <a href="#myPage" title="To Top" style="color: #0B60B0;">
     <span style="color: #0B60B0;"  class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p>
+  <div class="footer-links">
+            <a href="#" class="main-link">Attributes</a>
+            <div class="hidden-links">
+                <a href="https://www.w3schools.com">bootstrap</a>
+                <a href="https://www.freepik.com">Freepik</a>
+                <a href="https://www.flaticon.com/authors/vector-stall">Vector Stall </a>
+                <a href="https://www.flaticon.com/authors/vectorslab">Vectorslab</a>
+                <a href="https://www.flaticon.com/authors/puckung">Puckung</a>
+                <a href="https://www.flaticon.com/authors/flowicon">Flowicon</a>
+            </div>
+        </div>
   <p>© Copyright 2024 UNIVERSITY OF THE CORDILLERAS</p>
-  <p>ATTRIBUTES:</p>
-  <div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-  <div> Icons made by <a href="https://www.flaticon.com/authors/vector-stall" title="Vector Stall"> Vector Stall </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-  <div> Icons made by <a href="https://www.flaticon.com/authors/vectorslab" title="Vectorslab"> Vectorslab </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-  <a href="https://www.flaticon.com/free-icons/allergy" title="allergy icons">Allergy icons created by Freepik - Flaticon</a>
-  <div> Icons made by <a href="https://www.flaticon.com/authors/puckung" title="Puckung"> Puckung </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-  <div> Icons made by <a href="https://www.flaticon.com/authors/flowicon" title="Flowicon"> Flowicon </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-  
+
+ 
+ 
 
 
 

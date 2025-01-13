@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
  body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
@@ -40,6 +41,12 @@
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
   }
+
+
+
+
+
+
   .container-fluid {
     padding: 60px 50px;
   }
@@ -157,7 +164,7 @@
   footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #f4511e;
+    color: #2bc1d1;
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -216,58 +223,8 @@
 
 
 
-  .search-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .search-box {
-    width: 300px;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    color: #333;  /* Text color */
-    background-color: #fff;  /* Background color */
-  }
-
-  .search-results {
-    position: absolute;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    border: 1px solid #ccc;
-    width: 300px;
-    display: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-height: 200px;
-    overflow-y: auto;
-  }
-
-  .search-results a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-  }
-
-  .search-results a:hover {
-    background-color: #f1f1f1;
-  }
-
-  section {
-    padding: 50px;
-    margin: 50px 0;
-  }
-
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
+ 
+ 
 
 
 
@@ -395,8 +352,28 @@
 
 
 
+.footer-links .hidden-links {
+  display: none;
+  text-align: left;
+  margin-top: 10px;
+}
+/* Show the hidden links when hovering over the 'Show Links' link */
+.footer-links:hover .hidden-links {
+  display: block;
+}
 
+/* Style the individual links */
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
 
+.footer-links .main-link {
+  font-weight: bold;
+  cursor: pointer;
+}
 
 
 
