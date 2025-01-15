@@ -128,7 +128,8 @@ h2 {
         <a href="dashboard.php" target="content-frame">DATA TABLE</a>
 
         
-            <a href="logout.php" class="logout-btn">logout</a>
+        <a href="../php/logout.php" class="logout-btn">Logout</a>
+
         
     </div>
     
