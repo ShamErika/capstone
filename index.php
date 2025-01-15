@@ -61,7 +61,7 @@
  <img  class="logo-img" src='img/lamok.png'>
  
 
- <div class="ani-text">One way to predict your future lamok destination</div>
+ <div class="ani-text">"A comprehensive website providing all the essential information about dengue."</div>
 
 
 </div>
@@ -152,7 +152,7 @@
 </div> <!-- END PART OF HOME PAGE CONTAINER --> 
 
 <br>
-<br>
+
 
 
 <div class="container-fluid bg-grey">
@@ -162,12 +162,14 @@
     </div>
     <div class="col-sm-8">
 
-      <h2 style="font-size: 30px; color: #0B60B0;">Overview</h2><br>
+      <h2 style="font-size: 30px; color: #0B60B0;">Overview</h2>
       <h4><strong>What is Dengue?</strong>
         <br>
+        Dengue (DENG-gey) fever is a mosquito-borne illness that occurs in tropical and subtropical areas of the world. Mild dengue fever causes a high fever and flu-like symptoms. 
+        The severe form of dengue fever, also called dengue hemorrhagic fever, can cause serious bleeding, a sudden drop in blood pressure (shock) and death. <br><br>
         Dengue (break-bone fever) is a viral infection that spreads from mosquitoes to people. It is more common in tropical and subtropical climates.
       </h4><br>
-      <p><strong>NOTE:</strong><br> Most people who get dengue will not have symptoms. But for those who do, the most common symptoms are high fever, headache, 
+      <p style="font-size: 16px;"><strong>NOTE:</strong><br> Most people who get dengue will not have symptoms. But for those who do, the most common symptoms are high fever, headache, 
         body aches, nausea, and rash. Most will get better in 1–2 weeks. Some people develop severe dengue and need care in a hospital. </p>
         <h5 style="color: #0B60B0;"><strong>World Health Organization: WHO & World Health Organization: WHO. (2024, April 23). Dengue and severe dengue.</strong></h5>
     </div>
@@ -227,7 +229,7 @@
 <!-- Container (PREVENTION Section) -->
 
 <div id="prevention" class="container-fluid text-center bg-grey">
-  <h2 style="font-size: 30px; color:#0B60B0">PREVENTION</h2><br>
+  <h2 style="font-size: 30px; color:#0B60B0">PREVENTION</h2>
   <h4>The mosquitoes that spread dengue are active during the day.</h4>
   <div class="row text-center slideanim">
     <div class="col-sm-4">
@@ -235,10 +237,10 @@
        <!--<img src="img/clothes.jpg"  width="400" height="300"> -->
         <p><strong>Mosquito breeding can be prevented by:</strong></p>
        
-          <p class="p-a">• preventing mosquitoes from accessing egg-laying habitats by environmental management and modification;<br></p>
-            <p class="p-a"> •disposing of solid waste properly and removing artificial man-made habitats that can hold water;<br></p>
-              <p class="p-a"> •covering, emptying and cleaning domestic water storage containers on a weekly basis;<br></p>
-                <p class="p-a"> •applying appropriate insecticides to outdoor water storage containers.<br></p>
+          <p class="p-a">• preventing mosquitoes from accessing egg-laying habitats by environmental management and modification<br></p>
+            <p class="p-a"> • disposing of solid waste properly and removing artificial man-made habitats that can hold water<br></p>
+              <p class="p-a"> • covering, emptying and cleaning domestic water storage containers on a weekly basis<br></p>
+                <p class="p-a"> • applying appropriate insecticides to outdoor water storage containers<br></p>
               </p>
       </div>
     </div>
@@ -247,11 +249,11 @@
        
         <p><strong>Lower the risk of getting dengue by protecting yourself from mosquito bites by using:</strong></p>
        
-          <p class="p-a">•clothes that cover as much of your body as possible;<br></p>
-          <p class="p-a">•mosquito nets if sleeping during the day, ideally nets sprayed with insect repellent;<br></p>
-          <p class="p-a">•window screens;<br></p>
-          <p class="p-a">•mosquito repellents (containing DEET, Picaridin or IR3535); and<br></p>
-          <p class="p-a">•coils and vaporizers.<br></p>
+          <p class="p-a">• clothes that cover as much of your body as possible<br></p>
+          <p class="p-a">• mosquito nets if sleeping during the day, ideally nets sprayed with insect repellent<br></p>
+          <p class="p-a">• window screens<br></p>
+          <p class="p-a">• mosquito repellents (containing DEET, Picaridin or IR3535)<br></p>
+          <p class="p-a">• coils and vaporizers<br></p>
         
           
           
@@ -261,11 +263,11 @@
       <div class="thumbnail">
         <p><strong>If you get dengue, it’s important to:<strong></p>
    
-          <p class="p-a"> •rest;<br></p>
-            <p class="p-a">•drink plenty of liquids;<br></p>
-              <p class="p-a">•use acetaminophen (paracetamol) for pain;<br></p>
-                <p class="p-a">•avoid non-steroidal anti-inflammatory drugs, like ibuprofen and aspirin; and<br></p>
-                  <p class="p-a"> •watch for severe symptoms and contact your doctor as soon as possible if you notice any.<br></p>
+          <p class="p-a"> • rest<br></p>
+            <p class="p-a">• drink plenty of liquids<br></p>
+              <p class="p-a">• use acetaminophen (paracetamol) for pain<br></p>
+                <p class="p-a">• avoid non-steroidal anti-inflammatory drugs, like ibuprofen and aspirin<br></p>
+                  <p class="p-a"> • watch for severe symptoms and contact your doctor as soon as possible if you notice any<br></p>
       </div>
     </div>
   </div><br>
@@ -312,9 +314,9 @@
     <h2 style="font-size:35px; color: #0B60B0">About</h2>
 
         <p style="font-size:20px; color: black">
-           LALAMOK is a website that helps people become knowledgeable about dengue prevention, symptoms, and cases around Baguio City.
-            <br>With the help of predictions and updated cases, we can ensure the safety of people around the city with the use of this website.
-            <br>LALAMOK aims to protect and make sure that all suburbs (barangays) of Baguio City aren't surrounded by deadly mosquitoes that can cause health risks.
+        LALAMOK is a website designed to educate people about dengue by providing essential information on 
+        prevention, symptoms, and current cases in Baguio City. 
+        It features updates and predictive insights to help users stay informed and proactive.
         </p>
 
   </div>

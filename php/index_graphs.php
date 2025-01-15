@@ -28,6 +28,15 @@ $conn->close();
     <title>Dengue Cases Line Graph</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            font-family: "century gothic";
+            font-size: 14px;
+        }
+        select {
+            font-family: "century gothic";
+        }
+        </style>
 </head>
 <body>
     <h1>Dengue Cases Line Graph</h1>

@@ -26,6 +26,11 @@ $conn->close();
     <meta charset="UTF-8">
     <title>Dengue Predictions for 2025</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body{
+            font-family: "century gothic";
+        }
+        </style>
 </head>
 <body>
     <h2>Dengue Case Predictions for 2025</h2>

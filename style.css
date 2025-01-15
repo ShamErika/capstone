@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
- body {
-    font: 400 15px Lato, sans-serif;
+  body {
+    font: 400 15px;
     line-height: 1.8;
     color: white;
+    font-family: "century gothic";
   }
   h2 {
     font-size: 24px;
@@ -291,12 +291,14 @@
 #legend h3 {
   margin: 0 0 10px 0;
   font-size: 16px;
+  font-family: "century gothic";
 }
 
 .legend-item {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  font-family: "century gothic";
 }
 
 .legend-symbol {
