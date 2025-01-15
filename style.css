@@ -345,30 +345,6 @@
 }
 
 
-/* footer part */
-.footer-links .hidden-links {
-  display: none;
-  text-align: left;
-  margin-top: 10px;
-}
-/* Show the hidden links when hovering over the 'Show Links' link */
-.footer-links:hover .hidden-links {
-  display: block;
-}
-
-/* Style the individual links */
-.footer-links a {
-  color:  #0B60B0;
-  text-decoration: none;
-  display: block;
-  margin: 5px 0;
-}
-
-.footer-links .main-link {
-  font-weight: bold;
-  cursor: pointer;
-  color: #0B60B0;
-}
 
 
 
@@ -403,20 +379,6 @@
   }
 }
 
-/* highlights in about */
-h6 {
-font-size: 24px;
-line-height: 1.6;
-color: #444;
-text-align: center;
-}
-h6 br {
-margin-bottom: 15px;
-}
-.highlight {
-color: #2d9cdb;
-font-weight: bold;
-}
 
 
 hr {

@@ -311,11 +311,11 @@
   <div class="text-center">
     <h2 style="font-size:35px; color: #0B60B0">About</h2>
 
-        <h6>
-            <span class="highlight">LALAMOK</span> is a website that helps people become knowledgeable about dengue prevention, symptoms, and cases around Baguio City.
+        <p style="font-size:20px; color: black">
+           LALAMOK is a website that helps people become knowledgeable about dengue prevention, symptoms, and cases around Baguio City.
             <br>With the help of predictions and updated cases, we can ensure the safety of people around the city with the use of this website.
             <br>LALAMOK aims to protect and make sure that all suburbs (barangays) of Baguio City aren't surrounded by deadly mosquitoes that can cause health risks.
-        </h4>
+        </p>
 
   </div>
         </div>
