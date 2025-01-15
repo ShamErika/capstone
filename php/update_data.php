@@ -120,7 +120,8 @@ h2 {
 
     <div class="sidebar">
     <div class="logo">
-        <img src="img/lamok.png" alt="Logo" style="width: 100%; height: auto;">
+    <img src="../img/lamok.png" alt="Logo" style="width: 100%; height: auto;">
+
     </div>
         <h2>ADMIN PANEL</h2>
         <a href="update.php" target="content-frame">UPDATE</a>

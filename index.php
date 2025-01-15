@@ -19,6 +19,74 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="shortcut icon" href="img/lamok.png" type="image/x-icon"> 
   <link rel="stylesheet" href="style.css">
+  <style>
+
+.ani-text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.ani-text:first-of-type {
+  animation: showup 7s infinite;
+}
+
+.ani-text:last-of-type {
+  overflow: hidden; /* Ensures smooth animation */
+  animation: reveal 7s infinite;
+}
+
+.ani-text:last-of-type span {
+  display: inline-block;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes slidein {
+  0%, 20% { transform: translateX(-100%); } /* Starts off-screen */
+  35% { transform: translateX(0); }        /* Slides in fully visible */
+  100% { transform: translateX(0); }       /* Stays in position */
+}
+
+@keyframes reveal {
+  0%, 20% { opacity: 0; width: 0px; }
+  30% { opacity: 1; width: 100%; } /* Expands fully */
+  80% { opacity: 1; }
+  100% { opacity: 0; width: 100%; }
+}
+
+.text-content {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  
+h4 {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #444;
+  text-align: center;
+}
+h4 br {
+  margin-bottom: 15px;
+}
+.highlight {
+  color: #2d9cdb;
+  font-weight: bold;
+}
+
+
+    </style>
 </head>
 
 
@@ -57,9 +125,14 @@
 
 <div class="jumbotron text-center">
  <img  class="logo-img" src='img/lamok.png'>
+ 
+
+ <p class="ani-text text-center" style="color: aliceblue;">One way</p>
+<div class="ani-text text-center">
+  <p><span style="color: aliceblue;">to predict your future lamok destination</span></p>
+</div>
 
 
- <p style="color: aliceblue;">One way to predict your future lamok destination</p> 
 </div>
 
  
@@ -300,16 +373,19 @@
   </div>
 </div>
 
-<!-- Container (Pricing Section) -->
+<!-- Container (About Section) -->
 <div id="about" class="container-fluid">
   <div class="text-center">
     <h2 style="font-size:35px;">About</h2>
-    <h4>LALAMOK is a website that helps people be knowledgable about dengue prevention, symptoms and cases around Baguio City.
-      <br> With the help of Predictions and Updated cases,we can aure the safety of people around the city with the use of this website.
-      <br>LALAMOK help aim to protect and make sure that all suburb(barangay) of Baguio City aren't surrounded by deadly mosquitos that 
-      can 
-    </h4>
+    <div class="text-content">
+        <h4>
+            <span class="highlight">LALAMOK</span> is a website that helps people become knowledgeable about dengue prevention, symptoms, and cases around Baguio City.
+            <br>With the help of predictions and updated cases, we can ensure the safety of people around the city with the use of this website.
+            <br>LALAMOK aims to protect and make sure that all suburbs (barangays) of Baguio City aren't surrounded by deadly mosquitoes that can cause health risks.
+        </h4>
+    </div>
   </div>
+        </div>
   <div class="row slideanim">
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
@@ -346,11 +422,6 @@
 
  
  
-
-
-
-
-
 </footer>
 
 <script src="script.js">
