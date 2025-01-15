@@ -372,4 +372,55 @@
 
 
 
+/* text animation inside jumburton*/
+.ani-text {
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  white-space: nowrap; /* Keeps text on one line */
+  text-align: center;
+  color: aliceblue;
+  animation: slidein 7s ease-in-out infinite;
+  font-size: 20px;
+}
 
+/* Keyframes */
+@keyframes slidein {
+  0%, 20% {
+    transform: translateX(-100%); /* Start off-screen */
+    opacity: 0; /* Hidden */
+  }
+  35% {
+    transform: translateX(0); /* Fully visible */
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0); /* Stay in place */
+  }
+  100% {
+    transform: translateX(100%); /* Slide out */
+    opacity: 0; /* Fade out */
+  }
+}
+
+/* highlights in about */
+h6 {
+font-size: 24px;
+line-height: 1.6;
+color: #444;
+text-align: center;
+}
+h6 br {
+margin-bottom: 15px;
+}
+.highlight {
+color: #2d9cdb;
+font-weight: bold;
+}
+
+
+hr {
+  background-color: #0B60B0;
+  height: 1px; /* Adjust thickness */
+  border: none; /* Remove default border */
+}

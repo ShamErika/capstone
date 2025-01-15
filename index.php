@@ -19,7 +19,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="shortcut icon" href="img/lamok.png" type="image/x-icon"> 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styles.css">
+
  
 </head>
 
@@ -163,7 +163,7 @@
     <div class="col-sm-8">
 
       <h2 style="font-size: 30px; color: #0B60B0;">Overview</h2><br>
-      <h4 ><strong>What is Dengue?</strong>
+      <h4><strong>What is Dengue?</strong>
         <br>
         Dengue (break-bone fever) is a viral infection that spreads from mosquitoes to people. It is more common in tropical and subtropical climates.
       </h4><br>
@@ -311,7 +311,7 @@
   <div class="text-center">
     <h2 style="font-size:35px; color: #0B60B0">About</h2>
 
-        <h4>
+        <h6>
             <span class="highlight">LALAMOK</span> is a website that helps people become knowledgeable about dengue prevention, symptoms, and cases around Baguio City.
             <br>With the help of predictions and updated cases, we can ensure the safety of people around the city with the use of this website.
             <br>LALAMOK aims to protect and make sure that all suburbs (barangays) of Baguio City aren't surrounded by deadly mosquitoes that can cause health risks.
