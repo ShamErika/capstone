@@ -19,74 +19,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="shortcut icon" href="img/lamok.png" type="image/x-icon"> 
   <link rel="stylesheet" href="style.css">
-  <style>
-
-.ani-text {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.ani-text:first-of-type {
-  animation: showup 7s infinite;
-}
-
-.ani-text:last-of-type {
-  overflow: hidden; /* Ensures smooth animation */
-  animation: reveal 7s infinite;
-}
-
-.ani-text:last-of-type span {
-  display: inline-block;
-  animation: slidein 7s infinite;
-}
-
-@keyframes showup {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes slidein {
-  0%, 20% { transform: translateX(-100%); } /* Starts off-screen */
-  35% { transform: translateX(0); }        /* Slides in fully visible */
-  100% { transform: translateX(0); }       /* Stays in position */
-}
-
-@keyframes reveal {
-  0%, 20% { opacity: 0; width: 0px; }
-  30% { opacity: 1; width: 100%; } /* Expands fully */
-  80% { opacity: 1; }
-  100% { opacity: 0; width: 100%; }
-}
-
-.text-content {
-  text-align: center;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  
-h4 {
-  font-size: 24px;
-  line-height: 1.6;
-  color: #444;
-  text-align: center;
-}
-h4 br {
-  margin-bottom: 15px;
-}
-.highlight {
-  color: #2d9cdb;
-  font-weight: bold;
-}
-
-
-    </style>
+  <link rel="stylesheet" href="styles.css">
+ 
 </head>
 
 
@@ -127,10 +61,7 @@ h4 br {
  <img  class="logo-img" src='img/lamok.png'>
  
 
- <p class="ani-text text-center" style="color: aliceblue;">One way</p>
-<div class="ani-text text-center">
-  <p><span style="color: aliceblue;">to predict your future lamok destination</span></p>
-</div>
+ <div class="ani-text">One way to predict your future lamok destination</div>
 
 
 </div>
@@ -138,15 +69,15 @@ h4 br {
  
 
 
-<!-- Container (HOME Section) -->
+<!-- Container (HOME Section) -->                        
 <div id="home" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2 style="font-size: 30px;">DASHBOARD</h2>
+      <h2 style="font-size: 30px; color: #0B60B0">DASHBOARD</h2>
     
       <hr>
       <br><br>
-      8 
+      
 
 <!--graph part-->
 
@@ -219,9 +150,10 @@ h4 br {
 </div>
 
 </div> <!-- END PART OF HOME PAGE CONTAINER --> 
+
 <br>
 <br>
-<!-- end ng graph and gis page -->
+
 
 <div class="container-fluid bg-grey">
   <div class="row">
@@ -230,7 +162,7 @@ h4 br {
     </div>
     <div class="col-sm-8">
 
-      <h2 style="color: #0B60B0;">Overview</h2><br>
+      <h2 style="font-size: 30px; color: #0B60B0;">Overview</h2><br>
       <h4 ><strong>What is Dengue?</strong>
         <br>
         Dengue (break-bone fever) is a viral infection that spreads from mosquitoes to people. It is more common in tropical and subtropical climates.
@@ -247,7 +179,7 @@ h4 br {
 <!-- Container (SIGNS AND SYMPTOMS Section) -->
 <div id="ss" class="container-fluid text-center">
   <section id="signs and symptoms">
-  <h2>SIGNS AND SYMPTOMS</h2>
+  <h2 style="font-size: 30px; color: #0B60B0;">SIGNS AND SYMPTOMS</h2>
   <h4>When symptoms do occur, they may be mistaken for other illnesses — such as the flu — and usually 
     begin four to 10 days after you are bitten by an infected mosquito.</h4>
     <h4>Dengue fever causes a high fever — 104 F (40 C) — and any of the following signs and symptoms:</h4>
@@ -293,8 +225,9 @@ h4 br {
 <br><br>
 
 <!-- Container (PREVENTION Section) -->
+
 <div id="prevention" class="container-fluid text-center bg-grey">
-  <h2>PREVENTION</h2><br>
+  <h2 style="font-size: 30px; color:#0B60B0">PREVENTION</h2><br>
   <h4>The mosquitoes that spread dengue are active during the day.</h4>
   <div class="row text-center slideanim">
     <div class="col-sm-4">
@@ -337,7 +270,7 @@ h4 br {
     </div>
   </div><br>
   
-  <h2>What our doctors say</h2>
+  <h2 style="font-size: 30px; color: #0B60B0">What our doctors say</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -376,14 +309,14 @@ h4 br {
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
   <div class="text-center">
-    <h2 style="font-size:35px;">About</h2>
-    <div class="text-content">
+    <h2 style="font-size:35px; color: #0B60B0">About</h2>
+
         <h4>
             <span class="highlight">LALAMOK</span> is a website that helps people become knowledgeable about dengue prevention, symptoms, and cases around Baguio City.
             <br>With the help of predictions and updated cases, we can ensure the safety of people around the city with the use of this website.
             <br>LALAMOK aims to protect and make sure that all suburbs (barangays) of Baguio City aren't surrounded by deadly mosquitoes that can cause health risks.
         </h4>
-    </div>
+
   </div>
         </div>
   <div class="row slideanim">
@@ -408,7 +341,7 @@ h4 br {
     <span style="color: #0B60B0;"  class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <div class="footer-links">
-            <a href="#" class="main-link">Attributes</a>
+            <a href="#" class="main-link" style="color: #0B60B0">Attributes</a>
             <div class="hidden-links">
                 <a href="https://www.w3schools.com">bootstrap</a>
                 <a href="https://www.freepik.com">Freepik</a>
@@ -418,6 +351,7 @@ h4 br {
                 <a href="https://www.flaticon.com/authors/flowicon">Flowicon</a>
             </div>
         </div>
+
   <p>© Copyright 2024 UNIVERSITY OF THE CORDILLERAS</p>
 
  
