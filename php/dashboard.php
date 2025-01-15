@@ -35,27 +35,53 @@ include 'db.php';
             text-align: center;
             margin-top: 10px;
         }
+        button {
+            font-family: "century gothic";
+            background-color: #D30000;
+            color: #f2f2f2;
+        }
     </style>
     <script>
-        function filterData() {
-            const year = document.getElementById("yearFilter").value;
-            const barangay = document.getElementById("barangayFilter").value;
-            const month = document.getElementById("monthFilter").value;
-            const rows = document.querySelectorAll("tbody tr");
+    function filterData() {
+        const year = document.getElementById("yearFilter").value;
+        const barangay = document.getElementById("barangayFilter").value;
+        const month = document.getElementById("monthFilter").value;
+        const rows = document.querySelectorAll("tbody tr");
 
-            rows.forEach(row => {
-                const rowYear = row.getAttribute("data-year");
-                const rowBarangay = row.getAttribute("data-barangay");
-                const rowMonth = row.getAttribute("data-month");
+        rows.forEach(row => {
+            const rowYear = row.getAttribute("data-year");
+            const rowBarangay = row.getAttribute("data-barangay");
+            const rowMonth = row.getAttribute("data-month");
 
-                row.style.display = (
-                    (year === "all" || rowYear === year) &&
-                    (barangay === "all" || rowBarangay === barangay) &&
-                    (month === "all" || rowMonth === month)
-                ) ? "" : "none";
-            });
-        }
-    </script>
+            row.style.display = (
+                (year === "all" || rowYear === year) &&
+                (barangay === "all" || rowBarangay === barangay) &&
+                (month === "all" || rowMonth === month)
+            ) ? "" : "none";
+        });
+    }
+    
+    function deleteRecord(id) {
+    if (confirm("Are you sure you want to delete this record?")) {
+        fetch('delete_record.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: id })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Record deleted successfully.");
+                location.reload();
+            } else {
+                alert("Failed to delete record.");
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+}
+</script>
+
 </head>
 <body>
     <h1>DENGUE CASES</h1>
@@ -113,10 +139,10 @@ include 'db.php';
         </thead>
         <tbody>
             <?php
-            $casesQuery = "SELECT * FROM dengue_cases_2022_2024 
-                ORDER BY year, 
-                FIELD(month, 'January', 'February', 'March', 'April', 'May', 
-                            'June', 'July', 'August', 'September', 'October', 'November', 'December')";
+            $casesQuery = "SELECT id, barangay, month, cases, year FROM dengue_cases_2022_2024 
+            ORDER BY year, 
+            FIELD(month, 'January', 'February', 'March', 'April', 'May', 
+                        'June', 'July', 'August', 'September', 'October', 'November', 'December')";        
             $casesResult = $conn->query($casesQuery);
 
             if ($casesResult->num_rows > 0) {
@@ -126,6 +152,7 @@ include 'db.php';
                     echo "<td>" . $row['month'] . "</td>";
                     echo "<td>" . $row['cases'] . "</td>";
                     echo "<td>" . $row['year'] . "</td>";
+                    echo "<td><button onclick=\"deleteRecord(" . $row['id'] . ")\">Delete</button></td>";
                     echo "</tr>";
                 }
             } else {

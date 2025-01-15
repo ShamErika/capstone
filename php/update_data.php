@@ -107,7 +107,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     background-color: darkred; /* Hover effect */
 }
 
-/* Apply Century Gothic to h2 elements only */
 h2 {
     font-family: "Century Gothic", sans-serif;
     text-align: center;
