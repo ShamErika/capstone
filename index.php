@@ -164,7 +164,7 @@
 
       <h2 style="font-size: 30px; color: #0B60B0;">Overview</h2>
       <h4><strong>What is Dengue?</strong>
-        <br>
+        <br><br>
         Dengue (DENG-gey) fever is a mosquito-borne illness that occurs in tropical and subtropical areas of the world. Mild dengue fever causes a high fever and flu-like symptoms. 
         The severe form of dengue fever, also called dengue hemorrhagic fever, can cause serious bleeding, a sudden drop in blood pressure (shock) and death. <br><br>
         Dengue (break-bone fever) is a viral infection that spreads from mosquitoes to people. It is more common in tropical and subtropical climates.
