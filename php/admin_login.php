@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($username == "admin" && $password == "password") {
         $_SESSION['loggedin'] = true;
-        header("Location: update_data.php"); 
+        header("Location: update.php"); 
         exit;
     } else {
         echo "Invalid credentials.";

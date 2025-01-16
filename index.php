@@ -94,7 +94,7 @@
   </div>
 
   <div class="graph">
-  <h1 style="color: black;">Predicted</h1>
+  <h1 style="color: black;">Predicted Cases</h1>
   <div id="graph-container">
   <div class="graph-below">
           <iframe id="predictions-frame" src="php/predictions.php"></iframe>
